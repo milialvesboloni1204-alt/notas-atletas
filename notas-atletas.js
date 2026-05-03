@@ -2,22 +2,20 @@ function calcularMediaAtletas(atletas) {
 
     for (let atleta of atletas) {
 
-        // Clona e ordena as notas (usado apenas para cálculo)
+        
         let notasOrdenadas = [...atleta.notas].sort((a, b) => a - b);
 
-        // Remove a menor e a maior nota
         let notasValidas = notasOrdenadas.slice(1, notasOrdenadas.length - 1);
 
-        // Calcula a soma das notas válidas
+   
         let soma = 0;
         for (let nota of notasValidas) {
             soma += nota;
         }
 
-        // Calcula a média
+      
         let media = soma / notasValidas.length;
 
-        // Exibe resultado no formato solicitado
         console.log(`Atleta: ${atleta.nome}`);
         console.log(`Notas Obtidas: ${atleta.notas}`);
         console.log(`Média Válida: ${media.toFixed(6)}\n`);
@@ -25,7 +23,7 @@ function calcularMediaAtletas(atletas) {
 }
 
 
-// Dados de entrada
+
 let atletas = [
     {
         nome: "Cesar Abascal",
@@ -45,5 +43,5 @@ let atletas = [
     }
 ];
 
-// Executa a função
+
 calcularMediaAtletas(atletas);
